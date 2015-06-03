@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_URLAUTH</name>
+	<author>Yireo</author>
+	<creationDate>February 2015</creationDate>
+	<copyright>Copyright 2015 Yireo.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@yireo.com</authorEmail>
+	<authorUrl>www.yireo.com</authorUrl>
+	<version>0.1.1</version>
+	<description>PLG_SYSTEM_URLAUTH_DESC</description>
+
+	<files>
+		<filename plugin="urlauth">urlauth.php</filename>
+        <filename>index.html</filename>
+	</files>
+
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_urlauth.ini</language>
+        <language tag="en-GB">en-GB.plg_system_urlauth.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="redirect" type="menuitem" default="" label="PLG_SYSTEM_URLAUTH_FIELD_REDIRECT" description="PLG_SYSTEM_URLAUTH_FIELD_REDIRECT_DESC">
+                    <option value="">JNONE</option>
+                </field>
+                <field name="include_ip" type="textarea" default="" label="PLG_SYSTEM_URLAUTH_FIELD_INCLUDE_IP" description="PLG_SYSTEM_URLAUTH_FIELD_INCLUDE_IP_DESC" />
+                <field name="exclude_ip" type="textarea" default="" label="PLG_SYSTEM_URLAUTH_FIELD_EXCLUDE_IP" description="PLG_SYSTEM_URLAUTH_FIELD_EXCLUDE_IP_DESC" />
+            </fieldset>
+            <fieldset name="advanced">
+			    <field name="encrypt" type="radio" default="0" label="PLG_SYSTEM_URLAUTH_FIELD_ENCRYPT" description="PLG_SYSTEM_URLAUTH_FIELD_ENCRYPT_DESC" class="btn-group btn-group-yesno">
+				    <option value="0">JNO</option>
+    				<option value="1">JYES</option>
+	    		</field>
+                <field name="username_var" type="text" default="username" label="PLG_SYSTEM_URLAUTH_FIELD_USERNAME_VAR" description="PLG_SYSTEM_URLAUTH_FIELD_USERNAME_VAR_DESC" />
+                <field name="password_var" type="text" default="password" label="PLG_SYSTEM_URLAUTH_FIELD_PASSWORD_VAR" description="PLG_SYSTEM_URLAUTH_FIELD_PASSWORD_VAR_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="plg_system_urlauth">http://www.yireo.com/updates/plg_system_urlauth.xml</server>
+	</updateservers>
+</extension>
