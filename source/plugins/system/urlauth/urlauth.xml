@@ -41,6 +41,6 @@
     </config>
 
 	<updateservers>
-		<server type="extension" priority="1" name="plg_system_urlauth">http://www.yireo.com/updates/plg_system_urlauth.xml</server>
+		<server type="extension" priority="1" name="plg_system_urlauth">https://www.yireo.com/updates/plg_system_urlauth.xml</server>
 	</updateservers>
 </extension>
